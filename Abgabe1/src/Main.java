@@ -7,6 +7,6 @@ public class Main {
         HTMLParser htmlParser = new HTMLParser("html.txt");
         System.out.print("Geben Sie einen Link ein: ");
         htmlParser.getLinksFromURL(scanner.next(),0);
-        htmlParser.writeHTMLToFile();
+        htmlParser.writeAnalysisToFile();
     }
 }

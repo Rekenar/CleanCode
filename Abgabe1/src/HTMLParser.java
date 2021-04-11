@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.util.HashSet;
 
 public class HTMLParser {
-    private HashSet<String> links;
     private static final int MAX_DEPTH = 2;
+    private HashSet<String> links;
     private String content;
     private String fileName;
 
@@ -21,6 +21,7 @@ public class HTMLParser {
     }
 
     public void getLinksFromURL(String URL, int depth) {
+        System.out.println(URL + " " + depth);
         if (!links.contains(URL) && depth <= MAX_DEPTH && checkForResponse(URL)) {
             System.out.println(URL + " " + depth);
             try {
@@ -40,7 +41,7 @@ public class HTMLParser {
         }
     }
 
-    public void writeHTMLToFile() {
+    public void writeAnalysisToFile() {
         try {
             FileWriter fileWriter = new FileWriter(this.fileName);
             fileWriter.append(this.content);
@@ -70,13 +71,15 @@ public class HTMLParser {
         return doc.text().split(" ").length;
     }
 
-    private boolean checkForResponse(String url) {
+    private boolean checkForResponse(String URL) {
+        if(URL.length() < 10)return false;
         try {
-            Response response = Jsoup.connect(url).followRedirects(false).execute();
+            Response response = Jsoup.connect(URL).followRedirects(false).execute();
             if (response.statusCode() == 404) {
                 return false;
             }
-        } catch (IOException ex) {
+        } catch (IOException e) {
+            System.err.println("For '" + URL + "': " + e.getMessage());
             return false;
         }
         return true;
