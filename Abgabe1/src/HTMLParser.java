@@ -1,4 +1,3 @@
-import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -6,10 +5,11 @@ import org.jsoup.select.Elements;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashSet;
 
 public class HTMLParser {
-    private static final int MAX_DEPTH = 2;
     private HashSet<String> links;
     private String content;
     private String fileName;
@@ -21,19 +21,16 @@ public class HTMLParser {
     }
 
     public void getLinksFromURL(String URL, int depth) {
-        System.out.println(URL + " " + depth);
-        if (!links.contains(URL) && depth <= MAX_DEPTH && checkForResponse(URL)) {
-            System.out.println(URL + " " + depth);
+        if (!links.contains(URL) && depth >= 0 && !(URL.length() < 10)&& checkForResponse(URL)) {
+            links.add(URL);
             try {
-                links.add(URL);
                 Document doc = Jsoup.connect(URL).get();
-                appendContent(URL, doc);
-
                 Elements linksOnPage = doc.select("a[href]");
 
-                depth++;
+                appendContent(URL, doc);
+
                 for (Element page : linksOnPage) {
-                    getLinksFromURL(page.attr("abs:href"), depth);
+                    getLinksFromURL(page.attr("abs:href"), depth-1);
                 }
             } catch (IOException e) {
                 System.err.println("For '" + URL + "': " + e.getMessage());
@@ -51,37 +48,37 @@ public class HTMLParser {
         }
     }
 
-    private void appendContent(String URL, Document doc) {
+    public void appendContent(String URL, Document doc) {
         content += "URL: " + URL +
                 "\nWordCount: " + countWords(doc) +
                 "\nImageCount: " + countSelector(doc,"img") +
                 "\nVideoCount: " + countSelector(doc,"video") + "\n";
     }
 
-    private int countSelector(Document doc, String selector) {
-        int countSelector = 0;
+    public int countSelector(Document doc, String selector) {
         Elements selectorOnPage = doc.getElementsByTag(selector);
-        for (Element selectorElement : selectorOnPage) {
-            countSelector++;
-        }
-        return countSelector;
+        return selectorOnPage.size();
     }
 
-    private int countWords(Document doc) {
+    public int countWords(Document doc) {
         return doc.text().split(" ").length;
     }
 
-    private boolean checkForResponse(String URL) {
-        if(URL.length() < 10)return false;
+    public boolean checkForResponse(String URL) {
         try {
-            Response response = Jsoup.connect(URL).followRedirects(false).execute();
-            if (response.statusCode() == 404) {
+            URL url = new URL(URL);
+            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();
+
+            if (connection.getResponseCode() == 404 ){
+                System.out.println("404 Link not Found");
                 return false;
             }
+            return true;
         } catch (IOException e) {
             System.err.println("For '" + URL + "': " + e.getMessage());
-            return false;
         }
-        return true;
+        return false;
     }
 }
