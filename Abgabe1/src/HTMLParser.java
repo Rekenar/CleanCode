@@ -48,23 +48,23 @@ public class HTMLParser {
         }
     }
 
-    public void appendContent(String URL, Document doc) {
+    private void appendContent(String URL, Document doc) {
         content += "URL: " + URL +
                 "\nWordCount: " + countWords(doc) +
                 "\nImageCount: " + countSelector(doc,"img") +
                 "\nVideoCount: " + countSelector(doc,"video") + "\n";
     }
 
-    public int countSelector(Document doc, String selector) {
+    private int countSelector(Document doc, String selector) {
         Elements selectorOnPage = doc.getElementsByTag(selector);
         return selectorOnPage.size();
     }
 
-    public int countWords(Document doc) {
+    private int countWords(Document doc) {
         return doc.text().split(" ").length;
     }
 
-    public boolean checkForResponse(String URL) {
+    private boolean checkForResponse(String URL) {
         try {
             URL url = new URL(URL);
             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
