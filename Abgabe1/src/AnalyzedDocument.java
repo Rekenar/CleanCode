@@ -1,6 +1,7 @@
 import java.util.Collections;
 import java.util.Set;
 
+//Stores all analyzed properties
 public class AnalyzedDocument {
 	private final String url;
 	private final int wordCount;
@@ -14,9 +15,8 @@ public class AnalyzedDocument {
 		this.imageCount = imageCount;
 		this.videoCount = videoCount;
 		this.links = Collections.unmodifiableSet(links);
-
 	}
-
+	//Override toString Method for further use in analyzedDocumentsToString Method of WebCrawler Class
 	@Override
 	public String toString() {
 		return "URL=" + url + "\n" +
