@@ -1,0 +1,2 @@
+URL=http://localhost/newex/ex4.html
+wordCount=184, imageCount=4, videoCount=0

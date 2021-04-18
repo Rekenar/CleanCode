@@ -1,18 +1,20 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 //https://github.com/jhy/jsoup/blob/) 404 Link
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        HTMLParser htmlParser = new HTMLParser("html.txt");
+	public static void main(String[] args) {
 
-        System.out.print("Geben Sie einen Link ein: ");
-        String URL = scanner.next();
+		Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Geben Sie die Tiefe ein: ");
-        int depth = scanner.nextInt();
+		System.out.print("Geben Sie einen Link ein: ");
+		String URL = scanner.next();
 
-        htmlParser.getLinksFromURL(URL,depth);
-        htmlParser.writeAnalysisToFile();
-    }
+		System.out.print("Geben Sie die Tiefe ein: ");
+		int depth = scanner.nextInt();
+
+		ArrayList<AnalyzedDocument> a = WebCrawler.main(URL, depth);
+
+		WebCrawler.writeFile("testfile.txt", a);
+	}
 }
