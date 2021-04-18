@@ -22,18 +22,17 @@ public class HTMLParser {
 
     public void getLinksFromURL(String URL, int depth) {
         if (!links.contains(URL) && depth >= 0 && !(URL.length() < 10)&& checkForResponse(URL)) {
+            
             links.add(URL);
-            try {
-                Document doc = Jsoup.connect(URL).get();
-                Elements linksOnPage = doc.select("a[href]");
 
-                appendContent(URL, doc);
+            Document doc = getHTMLFromLink(URL);
 
-                for (Element page : linksOnPage) {
-                    getLinksFromURL(page.attr("abs:href"), depth-1);
-                }
-            } catch (IOException e) {
-                System.err.println("For '" + URL + "': " + e.getMessage());
+            appendContent(URL, doc);
+
+            Elements linksOnPage = doc.select("a[href]");
+
+            for (Element page : linksOnPage) {
+                getLinksFromURL(page.attr("abs:href"), depth-1);
             }
         }
     }
@@ -47,7 +46,15 @@ public class HTMLParser {
             ex.printStackTrace();
         }
     }
-
+    private Document getHTMLFromLink(String URL){
+        Document doc = null;
+        try{
+            doc = Jsoup.connect(URL).get();
+        }catch (IOException e){
+            System.err.println("For '" + URL + "': " + e.getMessage());
+        }
+        return doc;
+    }
     private void appendContent(String URL, Document doc) {
         content += "URL: " + URL +
                 "\nWordCount: " + countWords(doc) +
