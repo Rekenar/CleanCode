@@ -1,2 +1,140 @@
 URL=https://www.google.at
-wordCount=365, imageCount=7, videoCount=0
+wordCount=365, imageCount=8, videoCount=0
+URL=https://www.google.at/intl/de_at/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+wordCount=1209, imageCount=4, videoCount=0
+URL=https://www.google.at/history/optout?hl=de-AT&fg=1
+wordCount=433, imageCount=6, videoCount=0
+URL=https://policies.google.com/terms?hl=de-AT&fg=1
+wordCount=4324, imageCount=15, videoCount=0
+URL=https://mail.google.com/mail/&ogbl
+wordCount=121, imageCount=1, videoCount=0
+URL=https://sustainability.google/intl/de/commitments-europe/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=
+wordCount=1678, imageCount=1, videoCount=0
+URL=https://www.google.at/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1
+wordCount=250, imageCount=13, videoCount=0
+URL=https://accounts.google.com/ServiceLogin?hl=de&passive=true&continue=https://www.google.at/&ec=GAZAmgQ
+wordCount=124, imageCount=1, videoCount=0
+URL=https://www.google.at/?output=search&gbv=1&sei=MN23YNuKBLvVgwfizIu4Cg
+wordCount=18, imageCount=1, videoCount=0
+URL=https://policies.google.com/privacy?hl=de-AT&fg=1
+wordCount=8239, imageCount=34, videoCount=0
+URL=https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=de-AT
+wordCount=1550, imageCount=2, videoCount=0
+URL=https://www.google.at/intl/de/about/products
+wordCount=1126, imageCount=418, videoCount=0
+URL=https://www.google.at/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+wordCount=904, imageCount=62, videoCount=0
+URL=https://policies.google.com/terms?hl=de-AT&fg=1&utm_source=ucbs
+wordCount=4324, imageCount=15, videoCount=0
+URL=https://support.google.com/websearch/?p=ws_results_help&hl=de-AT&fg=1
+wordCount=469, imageCount=1, videoCount=0
+URL=https://www.google.at#
+wordCount=365, imageCount=8, videoCount=0
+URL=https://about.google/?utm_source=google-AT&utm_medium=referral&utm_campaign=hp-footer&fg=1
+wordCount=230, imageCount=14, videoCount=2
+URL=https://www.google.at/advanced_search?hl=de-AT&fg=1
+wordCount=718, imageCount=0, videoCount=0
+URL=https://www.google.at/imghp?hl=de&ogbl
+wordCount=334, imageCount=5, videoCount=0
+URL=https://www.google.at/search?q=Frank+Kameny&oi=ddle&ct=144866279&hl=de&sa=X&ved=0ahUKEwjb4rrW2PnwAhW76uAKHWLmAqcQPQgC
+wordCount=1004, imageCount=32, videoCount=0
+URL=https://policies.google.com/privacy?hl=de-AT&fg=1&utm_source=ucbs
+wordCount=8239, imageCount=34, videoCount=0
+URL=https://google.com/search/howsearchworks/?fg=1
+wordCount=362, imageCount=6, videoCount=6
+URL=https://www.google.at/preferences?hl=de-AT&fg=1
+wordCount=192, imageCount=1, videoCount=0
+URL=https://nhentai.net
+wordCount=344, imageCount=61, videoCount=0
+URL=https://nhentai.net/info/
+wordCount=242, imageCount=1, videoCount=0
+URL=https://nhentai.net/g/361191/
+wordCount=169, imageCount=25, videoCount=0
+URL=https://nhentai.net/g/361185/
+wordCount=174, imageCount=55, videoCount=0
+URL=https://nhentai.net/g/361042/
+wordCount=216, imageCount=259, videoCount=0
+URL=https://nhentai.net/g/361197/
+wordCount=140, imageCount=359, videoCount=0
+URL=https://nhentai.net/g/361183/
+wordCount=129, imageCount=383, videoCount=0
+URL=https://twitter.com/nhentaiOfficial
+wordCount=66, imageCount=1, videoCount=0
+URL=https://nhentai.net/g/361195/
+wordCount=165, imageCount=21, videoCount=0
+URL=https://nhentai.net/g/361206/
+wordCount=137, imageCount=61, videoCount=0
+URL=https://nhentai.net/random/
+wordCount=226, imageCount=93, videoCount=0
+URL=https://nhentai.net/artists/
+wordCount=84, imageCount=1, videoCount=0
+URL=https://nhentai.net/
+wordCount=344, imageCount=61, videoCount=0
+URL=https://nhentai.net/g/361200/
+wordCount=133, imageCount=61, videoCount=0
+URL=https://nhentai.net/g/361189/
+wordCount=154, imageCount=19, videoCount=0
+URL=https://nhentai.net/g/361187/
+wordCount=158, imageCount=19, videoCount=0
+URL=https://nhentai.net/g/361199/
+wordCount=137, imageCount=61, videoCount=0
+URL=https://nhentai.net/groups/
+wordCount=101, imageCount=1, videoCount=0
+URL=https://nhentai.net/g/361204/
+wordCount=166, imageCount=61, videoCount=0
+URL=https://nhentai.net/g/361038/
+wordCount=178, imageCount=57, videoCount=0
+URL=https://nhentai.net/g/361202/
+wordCount=149, imageCount=439, videoCount=0
+URL=https://nhentai.net/g/361192/
+wordCount=160, imageCount=495, videoCount=0
+URL=https://nhentai.net/tags/
+wordCount=124, imageCount=1, videoCount=0
+URL=https://nhentai.net/g/361182/
+wordCount=144, imageCount=221, videoCount=0
+URL=https://nhentai.net/g/361190/
+wordCount=163, imageCount=371, videoCount=0
+URL=https://nhentai.net/g/361196/
+wordCount=151, imageCount=357, videoCount=0
+URL=https://nhentai.net/?page=3
+wordCount=333, imageCount=51, videoCount=0
+URL=https://nhentai.net/g/361075/
+wordCount=161, imageCount=63, videoCount=0
+URL=https://nhentai.net/g/361186/
+wordCount=153, imageCount=51, videoCount=0
+URL=https://nhentai.net/?page=4
+wordCount=218, imageCount=51, videoCount=0
+URL=https://nhentai.net/?page=14206
+wordCount=34, imageCount=3, videoCount=0
+URL=https://nhentai.net/g/361194/
+wordCount=163, imageCount=41, videoCount=0
+URL=https://nhentai.net/?page=1
+wordCount=344, imageCount=61, videoCount=0
+URL=https://nhentai.net/g/361184/
+wordCount=133, imageCount=473, videoCount=0
+URL=https://nhentai.net/?page=2
+wordCount=261, imageCount=51, videoCount=0
+URL=https://nhentai.net/characters/
+wordCount=147, imageCount=1, videoCount=0
+URL=https://nhentai.net/g/361207/
+wordCount=138, imageCount=29, videoCount=0
+URL=https://nhentai.net/parodies/
+wordCount=294, imageCount=1, videoCount=0
+URL=https://nhentai.net/g/361079/
+wordCount=157, imageCount=133, videoCount=0
+URL=https://nhentai.net/g/361201/
+wordCount=126, imageCount=399, videoCount=0
+URL=https://nhentai.net/g/361198/
+wordCount=202, imageCount=85, videoCount=0
+URL=https://nhentai.net/?page=5
+wordCount=265, imageCount=51, videoCount=0
+URL=https://nhentai.net/g/361188/
+wordCount=150, imageCount=23, videoCount=0
+URL=https://nhentai.net/?page=6
+wordCount=295, imageCount=51, videoCount=0
+URL=https://nhentai.net/g/361029/
+wordCount=184, imageCount=63, videoCount=0
+URL=https://nhentai.net/g/361205/
+wordCount=133, imageCount=53, videoCount=0
+URL=https://nhentai.net/g/361203/
+wordCount=149, imageCount=61, videoCount=0

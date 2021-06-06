@@ -61,7 +61,6 @@ public final class WebCrawler {
 		if (depth >= 0) {
 			//Get Optional Document from URL
 			Optional<Document> toAnalyze = getDocumentFromURL(url);
-			//Optional is empty return
 			if (toAnalyze.isEmpty()) {
 				return;
 			}
