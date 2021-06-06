@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.Semaphore;
 
 public final class WebCrawler {
 
@@ -37,6 +38,31 @@ public final class WebCrawler {
 
 		return myDocument;
 	}
+
+	public static ArrayList<AnalyzedDocument> multipleThread(String[] array, int depth){
+		ArrayList<AnalyzedDocument> a = new ArrayList<>();
+		Thread[] threads = new Thread[array.length];
+		Semaphore semaphore = new Semaphore(-array.length+1);
+
+		for (int i = 0; i < threads.length; i++) {
+			String link = array[i];
+			threads[i] = new Thread(() -> {
+				a.addAll(WebCrawler.main(link, depth));
+				semaphore.release();
+			});
+			threads[i].start();
+		}
+
+		try{
+			semaphore.acquire();
+		}catch(Exception e){
+			System.out.println(e);
+		}
+		return a;
+	}
+
+
+
 	//Write the AnalyzedDocument to the File
 	public static void writeFile(String filename, List<AnalyzedDocument> doc) {
 		try {

@@ -17,6 +17,8 @@ public class Main {
 		int depth = scanner.nextInt();
 
 
+		a = WebCrawler.multipleThread(array,depth);
+/*
 		Thread[] threads = new Thread[array.length];
 		Semaphore semaphore = new Semaphore(-array.length+1);
 
@@ -30,6 +32,8 @@ public class Main {
 		}
 
 		semaphore.acquire();
+
+ */
 
 		WebCrawler.writeFile("testfile.txt", a);
 	}
